@@ -37,12 +37,6 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tab_Form
         $fieldset = $form->addFieldset('magazine_form', array('legend'=>Mage::helper('unideal_topads')->__('Magazine')));
         $fieldset->addType('image', Mage::getConfig()->getBlockClassName('unideal_topads/adminhtml_magazine_helper_image'));
 
-        $fieldset->addField('image', 'image', array(
-            'label' => Mage::helper('unideal_topads')->__('Image Magazine'),
-            'name'  => 'image',
-
-        ));
-
         $fieldset->addField('name', 'text', array(
             'label' => Mage::helper('unideal_topads')->__('Name'),
             'name'  => 'name',
@@ -50,18 +44,25 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tab_Form
             'class' => 'required-entry',
 
         ));
+        
+        $fieldset->addField('image', 'image', array(
+            'label' => Mage::helper('unideal_topads')->__('Image Magazine'),
+            'name'  => 'image',
 
+        ));
+        
+        $fieldset->addField('alt', 'text', array(
+            'label' => Mage::helper('unideal_topads')->__('Alt text'),
+            'name'  => 'alt',
+
+        ));
+        
         $fieldset->addField('link', 'text', array(
             'label' => Mage::helper('unideal_topads')->__('link'),
             'name'  => 'link',
 
         ));
 
-        $fieldset->addField('alt', 'text', array(
-            'label' => Mage::helper('unideal_topads')->__('Alt text'),
-            'name'  => 'alt',
-
-        ));
         $fieldset->addField('status', 'select', array(
             'label' => Mage::helper('unideal_topads')->__('Status'),
             'name'  => 'status',
