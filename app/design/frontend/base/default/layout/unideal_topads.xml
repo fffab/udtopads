@@ -16,6 +16,15 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
 -->
-<layout>
-    
+<layout version="0.1.0">
+     <default>
+          <reference name="content">
+          </reference>
+      </default>
+      <unideal_topads_banner_index>
+           <reference name="content">
+                <block type="unideal_topads/banner"  name="displaytopads"
+                          template="unideal_topads/default.phtml" />
+           </reference>
+      </unideal_topads_banner_index>
 </layout>
