@@ -17,14 +17,24 @@
  */
 -->
 <layout version="0.1.0">
+    
      <default>
           <reference name="content">
           </reference>
       </default>
+      
       <unideal_topads_banner_index>
            <reference name="content">
                 <block type="unideal_topads/banner"  name="displaytopads"
                           template="unideal_topads/default.phtml" />
            </reference>
       </unideal_topads_banner_index>
+      
+      <unideal_topads_magazine_index>
+           <reference name="content">
+                <block type="unideal_topads/magazine"  name="displaymagazine"
+                          template="unideal_magazine/default.phtml" />
+           </reference>
+      </unideal_topads_magazine_index>  
+          
 </layout>

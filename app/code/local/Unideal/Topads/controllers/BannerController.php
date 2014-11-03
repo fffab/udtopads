@@ -30,19 +30,4 @@ class Unideal_Topads_BannerController
           $this->renderLayout();
     }
     
-    public function mamethodeAction()
-        {
-          echo 'test';
-        }
-      
-    /* public function indexAction()
-    {
-        echo 'test index' ;
-    }
-    
-    public function mamethodeAction()
-    {
-        echo 'test mamethode';
-    }  */
-    
 }
