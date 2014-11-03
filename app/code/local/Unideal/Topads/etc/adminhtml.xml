@@ -35,12 +35,16 @@
                     <cms>
                         <children>
                             <unideal_topads translate="title" module="unideal_topads">
-                                <title>Top Ads</title>
+                                <title>Image Banners</title>
                                 <children>
                                     <banner translate="title" module="unideal_topads">
                                         <title>Banner</title>
                                         <sort_order>0</sort_order>
                                     </banner>
+                                    <magazine translate="title" module="unideal_topads">
+                                        <title>Magazine</title>
+                                        <sort_order>10</sort_order>
+                                    </magazine>
                                 </children>
                             </unideal_topads>                        </children>
                     </cms>
@@ -53,7 +57,7 @@
         <cms>
             <children>
                 <unideal_topads translate="title" module="unideal_topads">
-                    <title>Top Ads</title>
+                    <title>Image Banners</title>
                     <sort_order>0</sort_order>
                     <children>
                         <banner translate="title" module="unideal_topads">
@@ -61,6 +65,11 @@
                             <action>adminhtml/topads_banner</action>
                             <sort_order>0</sort_order>
                         </banner>
+                        <magazine translate="title" module="unideal_topads">
+                            <title>Magazine</title>
+                            <action>adminhtml/topads_magazine</action>
+                            <sort_order>10</sort_order>
+                        </magazine>
                     </children>
                 </unideal_topads>            </children>
         </cms>

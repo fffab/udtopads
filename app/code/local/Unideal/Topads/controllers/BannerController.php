@@ -23,26 +23,4 @@
  */
 class Unideal_Topads_BannerController
     extends Mage_Core_Controller_Front_Action {
-    
-    public function indexAction()
-    {
-          $this->loadLayout();
-          $this->renderLayout();
-    }
-    
-    public function mamethodeAction()
-        {
-          echo 'test';
-        }
-      
-    /* public function indexAction()
-    {
-        echo 'test index' ;
-    }
-    
-    public function mamethodeAction()
-    {
-        echo 'test mamethode';
-    }  */
-    
 }

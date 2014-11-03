@@ -15,12 +15,25 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
 /**
- * Topads setup
+ * Magazine image field renderer helper
  *
  * @category    Unideal
  * @package     Unideal_Topads
  * @author      Ultimate Module Creator
  */
-class Unideal_Topads_Model_Resource_Setup
-    extends Mage_Core_Model_Resource_Setup {
+class Unideal_Topads_Block_Adminhtml_Magazine_Helper_Image
+    extends Varien_Data_Form_Element_Image {
+    /**
+     * get the url of the image
+     * @access protected
+     * @return string
+     * @author Ultimate Module Creator
+     */
+    protected function _getUrl(){
+        $url = false;
+        if ($this->getValue()) {
+            $url = Mage::helper('unideal_topads/magazine_image')->getImageBaseUrl().$this->getValue();
+        }
+        return $url;
+    }
 }

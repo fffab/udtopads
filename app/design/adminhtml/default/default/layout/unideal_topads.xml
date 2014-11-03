@@ -49,50 +49,36 @@
         </reference>
     </adminhtml_topads_banner_edit>
 
-    <adminhtml_topads_banner_catalog_product_banners>
+    <adminhtml_topads_magazine_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>cms/unideal_topads/magazine</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="unideal_topads/adminhtml_magazine" name="magazine" />
+
+        </reference>
+    </adminhtml_topads_magazine_index>
+    <adminhtml_topads_magazine_grid>
         <block type="core/text_list" name="root" output="toHtml">
-            <block type="unideal_topads/adminhtml_catalog_product_edit_tab_banner" name="product.edit.tab.banner"/>
-            <block type="adminhtml/widget_grid_serializer" name="banner_grid_serializer">
-                <reference name="banner_grid_serializer">
-                    <action method="initSerializerBlock">
-                        <grid_block_name>product.edit.tab.banner</grid_block_name>
-                        <data_callback>getSelectedBanners</data_callback>
-                        <hidden_input_name>banners</hidden_input_name>
-                        <reload_param_name>product_banners</reload_param_name>
-                    </action>
-                    <action method="addColumnInputName">
-                        <input_name>position</input_name>
-                    </action>
-                </reference>
-            </block>
+            <block type="unideal_topads/adminhtml_magazine_grid" name="magazine_grid"/>
         </block>
-    </adminhtml_topads_banner_catalog_product_banners>
-    <adminhtml_topads_banner_catalog_product_bannersgrid>
-        <block type="core/text_list" name="root" output="toHtml">
-            <block type="unideal_topads/adminhtml_catalog_product_edit_tab_banner" name="product.edit.tab.banner"/>
-        </block>
-    </adminhtml_topads_banner_catalog_product_bannersgrid>
-    <adminhtml_topads_banner_products>
-        <block type="core/text_list" name="root" output="toHtml">
-            <block type="unideal_topads/adminhtml_banner_edit_tab_product" name="banner.edit.tab.product"/>
-            <block type="adminhtml/widget_grid_serializer" name="product_grid_serializer">
-                <reference name="product_grid_serializer">
-                    <action method="initSerializerBlock">
-                        <grid_block_name>banner.edit.tab.product</grid_block_name>
-                            <data_callback>getSelectedProducts</data_callback>
-                            <hidden_input_name>products</hidden_input_name>
-                            <reload_param_name>banner_products</reload_param_name>
-                    </action>
-                    <action method="addColumnInputName">
-                        <input_name>position</input_name>
-                    </action>
-                </reference>
-            </block>
-        </block>
-    </adminhtml_topads_banner_products>
-    <adminhtml_topads_banner_productsgrid>
-        <block type="core/text_list" name="root" output="toHtml">
-            <block type="unideal_topads/adminhtml_banner_edit_tab_product" name="banner.edit.tab.product"/>
-        </block>
-    </adminhtml_topads_banner_productsgrid>
+    </adminhtml_topads_magazine_grid>
+    <!-- Magazine add/edit action -->
+    <adminhtml_topads_magazine_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>cms/unideal_topads/magazine</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="unideal_topads/adminhtml_magazine_edit" name="magazine_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="unideal_topads/adminhtml_magazine_edit_tabs" name="magazine_tabs"></block>
+        </reference>
+    </adminhtml_topads_magazine_edit>
+
 </layout>

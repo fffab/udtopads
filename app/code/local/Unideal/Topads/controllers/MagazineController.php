@@ -15,12 +15,12 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
 /**
- * Topads setup
+ * Magazine front contrller
  *
  * @category    Unideal
  * @package     Unideal_Topads
  * @author      Ultimate Module Creator
  */
-class Unideal_Topads_Model_Resource_Setup
-    extends Mage_Core_Model_Resource_Setup {
+class Unideal_Topads_MagazineController
+    extends Mage_Core_Controller_Front_Action {
 }

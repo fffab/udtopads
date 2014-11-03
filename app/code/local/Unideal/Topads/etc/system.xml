@@ -26,7 +26,7 @@
     <sections>
         <unideal_topads translate="label" module="unideal_topads">
             <class>separator-top</class>
-            <label>Top Ads</label>
+            <label>Image Banners</label>
             <tab>unideal</tab>
             <frontend_type>text</frontend_type>
             <sort_order>100</sort_order>
@@ -53,6 +53,25 @@
                         </breadcrumbs>
                     </fields>
                 </banner>
+                <magazine translate="label" module="unideal_topads">
+                    <label>Magazine</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <breadcrumbs translate="label">
+                            <label>Use Breadcrumbs</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </breadcrumbs>
+                    </fields>
+                </magazine>
             </groups>
         </unideal_topads>
     </sections>

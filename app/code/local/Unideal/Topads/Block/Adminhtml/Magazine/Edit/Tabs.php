@@ -15,13 +15,13 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
 /**
- * Banner admin edit tabs
+ * Magazine admin edit tabs
  *
  * @category    Unideal
  * @package     Unideal_Topads
  * @author      Ultimate Module Creator
  */
-class Unideal_Topads_Block_Adminhtml_Banner_Edit_Tabs
+class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tabs
     extends Mage_Adminhtml_Block_Widget_Tabs {
     /**
      * Initialize Tabs
@@ -30,38 +30,38 @@ class Unideal_Topads_Block_Adminhtml_Banner_Edit_Tabs
      */
     public function __construct() {
         parent::__construct();
-        $this->setId('banner_tabs');
+        $this->setId('magazine_tabs');
         $this->setDestElementId('edit_form');
-        $this->setTitle(Mage::helper('unideal_topads')->__('Banner'));
+        $this->setTitle(Mage::helper('unideal_topads')->__('Magazine'));
     }
     /**
      * before render html
      * @access protected
-     * @return Unideal_Topads_Block_Adminhtml_Banner_Edit_Tabs
+     * @return Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tabs
      * @author Ultimate Module Creator
      */
     protected function _beforeToHtml(){
-        $this->addTab('form_banner', array(
-            'label'        => Mage::helper('unideal_topads')->__('Banner'),
-            'title'        => Mage::helper('unideal_topads')->__('Banner'),
-            'content'     => $this->getLayout()->createBlock('unideal_topads/adminhtml_banner_edit_tab_form')->toHtml(),
+        $this->addTab('form_magazine', array(
+            'label'        => Mage::helper('unideal_topads')->__('Magazine'),
+            'title'        => Mage::helper('unideal_topads')->__('Magazine'),
+            'content'     => $this->getLayout()->createBlock('unideal_topads/adminhtml_magazine_edit_tab_form')->toHtml(),
         ));
         if (!Mage::app()->isSingleStoreMode()){
-            $this->addTab('form_store_banner', array(
+            $this->addTab('form_store_magazine', array(
                 'label'        => Mage::helper('unideal_topads')->__('Store views'),
                 'title'        => Mage::helper('unideal_topads')->__('Store views'),
-                'content'     => $this->getLayout()->createBlock('unideal_topads/adminhtml_banner_edit_tab_stores')->toHtml(),
+                'content'     => $this->getLayout()->createBlock('unideal_topads/adminhtml_magazine_edit_tab_stores')->toHtml(),
             ));
         }
         return parent::_beforeToHtml();
     }
     /**
-     * Retrieve banner entity
+     * Retrieve magazine entity
      * @access public
-     * @return Unideal_Topads_Model_Banner
+     * @return Unideal_Topads_Model_Magazine
      * @author Ultimate Module Creator
      */
-    public function getBanner(){
-        return Mage::registry('current_banner');
+    public function getMagazine(){
+        return Mage::registry('current_magazine');
     }
 }

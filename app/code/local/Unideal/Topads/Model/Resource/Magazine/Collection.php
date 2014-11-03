@@ -15,13 +15,13 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
 /**
- * Banner collection resource model
+ * Magazine collection resource model
  *
  * @category    Unideal
  * @package     Unideal_Topads
  * @author      Ultimate Module Creator
  */
-class Unideal_Topads_Model_Resource_Banner_Collection
+class Unideal_Topads_Model_Resource_Magazine_Collection
     extends Mage_Core_Model_Resource_Db_Collection_Abstract {
     protected $_joinedFields = array();
     /**
@@ -32,7 +32,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
      */
     protected function _construct(){
         parent::_construct();
-        $this->_init('unideal_topads/banner');
+        $this->_init('unideal_topads/magazine');
         $this->_map['fields']['store'] = 'store_table.store_id';
     }
     /**
@@ -40,7 +40,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
      * @access public
      * @param int|Mage_Core_Model_Store $store
      * @param bool $withAdmin
-     * @return Unideal_Topads_Model_Resource_Banner_Collection
+     * @return Unideal_Topads_Model_Resource_Magazine_Collection
      * @author Ultimate Module Creator
      */
     public function addStoreFilter($store, $withAdmin = true){
@@ -62,14 +62,14 @@ class Unideal_Topads_Model_Resource_Banner_Collection
     /**
      * Join store relation table if there is store filter
      * @access protected
-     * @return Unideal_Topads_Model_Resource_Banner_Collection
+     * @return Unideal_Topads_Model_Resource_Magazine_Collection
      * @author Ultimate Module Creator
      */
     protected function _renderFiltersBefore(){
         if ($this->getFilter('store')) {
             $this->getSelect()->join(
-                array('store_table' => $this->getTable('unideal_topads/banner_store')),
-                'main_table.entity_id = store_table.banner_id',
+                array('store_table' => $this->getTable('unideal_topads/magazine_store')),
+                'main_table.entity_id = store_table.magazine_id',
                 array()
             )->group('main_table.entity_id');
             /*
@@ -80,7 +80,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
         return parent::_renderFiltersBefore();
     }
     /**
-     * get banners as array
+     * get magazines as array
      * @access protected
      * @param string $valueField
      * @param string $labelField

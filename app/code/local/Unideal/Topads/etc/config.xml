@@ -19,7 +19,7 @@
 <config>
     <modules>
         <Unideal_Topads>
-            <version>1.0.0</version>
+            <version>1.0.5</version>
         </Unideal_Topads>
     </modules>
     <global>
@@ -52,12 +52,15 @@
                     <banner>
                         <table>unideal_topads_banner</table>
                     </banner>
+                    <magazine>
+                        <table>unideal_topads_magazine</table>
+                    </magazine>
                     <banner_store>
                         <table>unideal_topads_banner_store</table>
                     </banner_store>
-                    <banner_product>
-                        <table>unideal_topads_banner_product</table>
-                    </banner_product>
+                    <magazine_store>
+                        <table>unideal_topads_magazine_store</table>
+                    </magazine_store>
                 </entities>
             </unideal_topads_resource>
         </models>
@@ -79,26 +82,6 @@
                 </Unideal_Topads>
             </modules>
         </translate>
-        <events>
-            <core_block_abstract_prepare_layout_after>
-                <observers>
-                    <unideal_topads_banner_product>
-                        <type>singleton</type>
-                        <class>unideal_topads/adminhtml_observer</class>
-                        <method>addProductBannerBlock</method>
-                    </unideal_topads_banner_product>
-                </observers>
-            </core_block_abstract_prepare_layout_after>
-            <catalog_product_save_after>
-                <observers>
-                    <unideal_topads_banner_product>
-                        <type>singleton</type>
-                        <class>unideal_topads/adminhtml_observer</class>
-                        <method>saveProductBannerData</method>
-                    </unideal_topads_banner_product>
-                </observers>
-            </catalog_product_save_after>
-        </events>
     </adminhtml>
     <admin>
         <routers>
@@ -143,6 +126,9 @@
             <banner>
                 <breadcrumbs>1</breadcrumbs>
             </banner>
+            <magazine>
+                <breadcrumbs>1</breadcrumbs>
+            </magazine>
         </unideal_topads>
     </default>
 </config>

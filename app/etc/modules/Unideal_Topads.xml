@@ -22,7 +22,7 @@
             <active>true</active>
             <codePool>local</codePool>
             <depends>
-                <Mage_Catalog />
+                <Mage_Core />
              </depends>
         </Unideal_Topads>
     </modules>

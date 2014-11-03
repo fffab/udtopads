@@ -15,31 +15,31 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
 /**
- * Banner model
+ * Magazine model
  *
  * @category    Unideal
  * @package     Unideal_Topads
  * @author      Ultimate Module Creator
  */
-class Unideal_Topads_Model_Banner
+class Unideal_Topads_Model_Magazine
     extends Mage_Core_Model_Abstract {
     /**
      * Entity code.
      * Can be used as part of method name for entity processing
      */
-    const ENTITY    = 'unideal_topads_banner';
-    const CACHE_TAG = 'unideal_topads_banner';
+    const ENTITY    = 'unideal_topads_magazine';
+    const CACHE_TAG = 'unideal_topads_magazine';
     /**
      * Prefix of model events names
      * @var string
      */
-    protected $_eventPrefix = 'unideal_topads_banner';
+    protected $_eventPrefix = 'unideal_topads_magazine';
 
     /**
      * Parameter name in event
      * @var string
      */
-    protected $_eventObject = 'banner';
+    protected $_eventObject = 'magazine';
     /**
      * constructor
      * @access public
@@ -48,12 +48,12 @@ class Unideal_Topads_Model_Banner
      */
     public function _construct(){
         parent::_construct();
-        $this->_init('unideal_topads/banner');
+        $this->_init('unideal_topads/magazine');
     }
     /**
-     * before save banner
+     * before save magazine
      * @access protected
-     * @return Unideal_Topads_Model_Banner
+     * @return Unideal_Topads_Model_Magazine
      * @author Ultimate Module Creator
      */
     protected function _beforeSave(){
@@ -66,9 +66,9 @@ class Unideal_Topads_Model_Banner
         return $this;
     }
     /**
-     * save banner relation
+     * save magazine relation
      * @access public
-     * @return Unideal_Topads_Model_Banner
+     * @return Unideal_Topads_Model_Magazine
      * @author Ultimate Module Creator
      */
     protected function _afterSave() {
@@ -83,8 +83,6 @@ class Unideal_Topads_Model_Banner
     public function getDefaultValues() {
         $values = array();
         $values['status'] = 1;
-        $values['name'] = 'Name of the banner';
-
         return $values;
     }
 }
