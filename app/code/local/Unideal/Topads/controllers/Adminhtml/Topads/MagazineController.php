@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Adminhtml_Topads_MagazineController
     extends Unideal_Topads_Controller_Adminhtml_Topads {
@@ -41,7 +41,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * default action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function indexAction() {
         $this->loadLayout();
@@ -53,7 +53,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * grid action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function gridAction() {
         $this->loadLayout()->renderLayout();
@@ -62,7 +62,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * edit magazine - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function editAction() {
         $magazineId    = $this->getRequest()->getParam('id');
@@ -95,7 +95,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * new magazine action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function newAction() {
         $this->_forward('edit');
@@ -104,7 +104,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * save magazine - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function saveAction() {
         if ($data = $this->getRequest()->getPost('magazine')) {
@@ -150,7 +150,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * delete magazine - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function deleteAction() {
         if( $this->getRequest()->getParam('id') > 0) {
@@ -179,7 +179,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * mass delete magazine - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function massDeleteAction() {
         $magazineIds = $this->getRequest()->getParam('magazine');
@@ -208,7 +208,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * mass status change - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function massStatusAction(){
         $magazineIds = $this->getRequest()->getParam('magazine');
@@ -239,7 +239,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * export as csv - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function exportCsvAction(){
         $fileName   = 'magazine.csv';
@@ -250,7 +250,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * export as MsExcel - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function exportExcelAction(){
         $fileName   = 'magazine.xls';
@@ -261,7 +261,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * export as xml - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function exportXmlAction(){
         $fileName   = 'magazine.xml';
@@ -272,7 +272,7 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
      * Check if admin has permissions to visit related pages
      * @access protected
      * @return boolean
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _isAllowed() {
         return Mage::getSingleton('admin/session')->isAllowed('cms/unideal_topads/magazine');

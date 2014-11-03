@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Model_Resource_Banner_Collection
     extends Mage_Core_Model_Resource_Db_Collection_Abstract {
@@ -28,7 +28,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
      * constructor
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _construct(){
         parent::_construct();
@@ -41,7 +41,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
      * @param int|Mage_Core_Model_Store $store
      * @param bool $withAdmin
      * @return Unideal_Topads_Model_Resource_Banner_Collection
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function addStoreFilter($store, $withAdmin = true){
         if (!isset($this->_joinedFields['store'])){
@@ -63,7 +63,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
      * Join store relation table if there is store filter
      * @access protected
      * @return Unideal_Topads_Model_Resource_Banner_Collection
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _renderFiltersBefore(){
         if ($this->getFilter('store')) {
@@ -86,7 +86,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
      * @param string $labelField
      * @param array $additional
      * @return array
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _toOptionArray($valueField='entity_id', $labelField='name', $additional=array()){
         return parent::_toOptionArray($valueField, $labelField, $additional);
@@ -97,7 +97,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
      * @param string $valueField
      * @param string $labelField
      * @return array
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _toOptionHash($valueField='entity_id', $labelField='name'){
         return parent::_toOptionHash($valueField, $labelField);
@@ -107,7 +107,7 @@ class Unideal_Topads_Model_Resource_Banner_Collection
      * Extra GROUP BY strip added.
      * @access public
      * @return Varien_Db_Select
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getSelectCountSql(){
         $countSelect = parent::getSelectCountSql();

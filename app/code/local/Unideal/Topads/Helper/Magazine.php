@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Helper_Magazine
     extends Mage_Core_Helper_Abstract {
@@ -27,7 +27,7 @@ class Unideal_Topads_Helper_Magazine
      * check if breadcrumbs can be used
      * @access public
      * @return bool
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getUseBreadcrumbs(){
         return Mage::getStoreConfigFlag('unideal_topads/magazine/breadcrumbs');

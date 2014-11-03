@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Block_Adminhtml_Magazine
     extends Mage_Adminhtml_Block_Widget_Grid_Container {
@@ -27,7 +27,7 @@ class Unideal_Topads_Block_Adminhtml_Magazine
      * constructor
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function __construct(){
         $this->_controller         = 'adminhtml_magazine';

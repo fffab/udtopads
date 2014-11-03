@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Helper_Banner_Image
     extends Unideal_Topads_Helper_Image_Abstract {

@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Controller_Adminhtml_Topads
     extends Mage_Adminhtml_Controller_Action {
@@ -30,7 +30,7 @@ class Unideal_Topads_Controller_Adminhtml_Topads
      * @param string $destinationFolder
      * @param array $data
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _uploadAndGetName($input, $destinationFolder, $data) {
         try{

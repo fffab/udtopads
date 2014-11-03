@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 abstract class Unideal_Topads_Helper_Image_Abstract
     extends Mage_Core_Helper_Data {
@@ -110,7 +110,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * get the image base dir
      * @access public
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getImageBaseDir(){
         return Mage::getBaseDir('media').DS.$this->_subdir.DS.'image';
@@ -119,7 +119,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * get the image url for object
      * @access public
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getImageBaseUrl(){
         return Mage::getBaseUrl('media').$this->_subdir.'/'.'image';
@@ -131,7 +131,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @param Varien_Object $object
      * @param string $imageField
      * @return Unideal_Topads_Helper_Image_Abstract
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function init(Varien_Object $object, $imageField = 'image'){
         $this->_imageProcessor = null;
@@ -165,7 +165,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * get the image processor
      * @access protected
      * @return Varien_Image_Adapter_Gd2
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _getImageProcessor() {
         if (is_null($this->_imageProcessor)) {
@@ -181,7 +181,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @access public
      * @param bool $value
      * @return mixed(bool|Unideal_Topads_Helper_Image_Abstract)
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function keepAspectRatio($value = null){
         if (null !== $value) {
@@ -198,7 +198,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @access public
      * @param bool $value
      * @return mixed(bool|Unideal_Topads_Helper_Image_Abstract)
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function keepFrame($value = null){
         if (null !== $value) {
@@ -214,7 +214,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @access public
      * @param bool $value
      * @return mixed(bool|Unideal_Topads_Helper_Image_Abstract)
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function keepTransparency($value = null){
         if (null !== $value) {
@@ -231,7 +231,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @param bool|string $value
      * @return mixed(bool|Unideal_Topads_Helper_Image_Abstract)
      * https://github.com/wearefarm/magento-adaptive-resize/blob/master/README.md
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function adaptiveResize($value = null){
         if (null !== $value) {
@@ -250,7 +250,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @access public
      * @param bool $value
      * @return mixed(bool|Unideal_Topads_Helper_Image_Abstract)
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function constrainOnly($value = null){
        if (null !== $value) {
@@ -266,7 +266,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @access public
      * @param int $value
      * @return mixed(bool|Unideal_Topads_Helper_Image_Abstract)
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function quality($value = null){
         if (null !== $value) {
@@ -282,7 +282,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @access public
      * @param array $value
      * @return mixed(bool|Unideal_Topads_Helper_Image_Abstract)
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function backgroundColor($value = null){
         if (null !== $value) {
@@ -299,7 +299,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * @param int $width - defaults to null
      * @param int $height - defaults to null
      * @return Unideal_Topads_Helper_Image_Abstract
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function resize($width = null, $height = null) {
         $this->_scheduledResize = true;
@@ -311,7 +311,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * get destination image prefix
      * @access protected
      * @return Unideal_Topads_Helper_Image_Abstract
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _getDestinationImagePrefix() {
         if(!$this->_image) {
@@ -356,7 +356,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * get image destination path
      * @access protected
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _getDestinationPath() {
         if(!$this->_image) {
@@ -372,7 +372,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * get image url
      * @access protected
      * @return mixed (string|bool)
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _getImageUrl() {
         if(!$this->_image) {
@@ -389,7 +389,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * resize image
      * @access protected
      * @return Unideal_Topads_Helper_Image_Abstract
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _doResize() {
         if(!$this->_image || !$this->_scheduledResize || $this->_resized) {
@@ -440,7 +440,7 @@ abstract class Unideal_Topads_Helper_Image_Abstract
      * to string - no need for cache expire because the image names will be different
      * @access public
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function __toString(){
         try{

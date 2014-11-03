@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tab_Form
     extends Mage_Adminhtml_Block_Widget_Form {
@@ -27,7 +27,7 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tab_Form
      * prepare the form
      * @access protected
      * @return Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tab_Form
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _prepareForm(){
         $form = new Varien_Data_Form();

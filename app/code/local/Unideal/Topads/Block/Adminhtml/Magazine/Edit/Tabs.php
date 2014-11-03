@@ -19,14 +19,14 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tabs
     extends Mage_Adminhtml_Block_Widget_Tabs {
     /**
      * Initialize Tabs
      * @access public
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function __construct() {
         parent::__construct();
@@ -38,7 +38,7 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tabs
      * before render html
      * @access protected
      * @return Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tabs
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _beforeToHtml(){
         $this->addTab('form_magazine', array(
@@ -59,7 +59,7 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tabs
      * Retrieve magazine entity
      * @access public
      * @return Unideal_Topads_Model_Magazine
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getMagazine(){
         return Mage::registry('current_magazine');

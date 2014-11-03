@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Helper_Data
     extends Mage_Core_Helper_Abstract {
@@ -28,7 +28,7 @@ class Unideal_Topads_Helper_Data
      * @access public
      * @param $options
      * @return array
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function convertOptions($options){
         $converted = array();

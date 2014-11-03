@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 
 
@@ -29,7 +29,7 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Form
      * prepare form
      * @access protected
      * @return Unideal_Topads_Block_Adminhtml_Magazine_Edit_Form
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _prepareForm() {
         $form = new Varien_Data_Form(array(

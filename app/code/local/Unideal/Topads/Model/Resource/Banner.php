@@ -19,14 +19,14 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Model_Resource_Banner
     extends Mage_Core_Model_Resource_Db_Abstract {
     /**
      * constructor
      * @access public
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function _construct(){
         $this->_init('unideal_topads/banner', 'entity_id');
@@ -36,7 +36,7 @@ class Unideal_Topads_Model_Resource_Banner
      * @access public
      * @param int $bannerId
      * @return array
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function lookupStoreIds($bannerId){
         $adapter = $this->_getReadAdapter();
@@ -50,7 +50,7 @@ class Unideal_Topads_Model_Resource_Banner
      * @access public
      * @param Mage_Core_Model_Abstract $object
      * @return Unideal_Topads_Model_Resource_Banner
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _afterLoad(Mage_Core_Model_Abstract $object){
         if ($object->getId()) {
@@ -88,7 +88,7 @@ class Unideal_Topads_Model_Resource_Banner
      * @access protected
      * @param Mage_Core_Model_Abstract $object
      * @return Unideal_Topads_Model_Resource_Banner
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _afterSave(Mage_Core_Model_Abstract $object){
         $oldStores = $this->lookupStoreIds($object->getId());

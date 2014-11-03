@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Model_Magazine
     extends Mage_Core_Model_Abstract {
@@ -44,7 +44,7 @@ class Unideal_Topads_Model_Magazine
      * constructor
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function _construct(){
         parent::_construct();
@@ -54,7 +54,7 @@ class Unideal_Topads_Model_Magazine
      * before save magazine
      * @access protected
      * @return Unideal_Topads_Model_Magazine
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _beforeSave(){
         parent::_beforeSave();
@@ -69,7 +69,7 @@ class Unideal_Topads_Model_Magazine
      * save magazine relation
      * @access public
      * @return Unideal_Topads_Model_Magazine
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _afterSave() {
         return parent::_afterSave();
@@ -78,7 +78,7 @@ class Unideal_Topads_Model_Magazine
      * get default values
      * @access public
      * @return array
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getDefaultValues() {
         $values = array();

@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Block_Adminhtml_Magazine_Helper_Image
     extends Varien_Data_Form_Element_Image {
@@ -27,7 +27,7 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Helper_Image
      * get the url of the image
      * @access protected
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _getUrl(){
         $url = false;

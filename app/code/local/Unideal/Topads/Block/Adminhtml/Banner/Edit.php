@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Block_Adminhtml_Banner_Edit
     extends Mage_Adminhtml_Block_Widget_Form_Container {
@@ -27,7 +27,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Edit
      * constructor
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function __construct(){
         parent::__construct();
@@ -50,7 +50,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Edit
      * get the edit form header
      * @access public
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getHeaderText(){
         if( Mage::registry('current_banner') && Mage::registry('current_banner')->getId() ) {

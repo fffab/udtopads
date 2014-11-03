@@ -19,14 +19,14 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Model_Resource_Magazine
     extends Mage_Core_Model_Resource_Db_Abstract {
     /**
      * constructor
      * @access public
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function _construct(){
         $this->_init('unideal_topads/magazine', 'entity_id');
@@ -36,7 +36,7 @@ class Unideal_Topads_Model_Resource_Magazine
      * @access public
      * @param int $magazineId
      * @return array
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function lookupStoreIds($magazineId){
         $adapter = $this->_getReadAdapter();
@@ -50,7 +50,7 @@ class Unideal_Topads_Model_Resource_Magazine
      * @access public
      * @param Mage_Core_Model_Abstract $object
      * @return Unideal_Topads_Model_Resource_Magazine
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _afterLoad(Mage_Core_Model_Abstract $object){
         if ($object->getId()) {
@@ -88,7 +88,7 @@ class Unideal_Topads_Model_Resource_Magazine
      * @access protected
      * @param Mage_Core_Model_Abstract $object
      * @return Unideal_Topads_Model_Resource_Magazine
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _afterSave(Mage_Core_Model_Abstract $object){
         $oldStores = $this->lookupStoreIds($object->getId());

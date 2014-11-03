@@ -19,14 +19,14 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Block_Adminhtml_Banner_Grid
     extends Mage_Adminhtml_Block_Widget_Grid {
     /**
      * constructor
      * @access public
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function __construct(){
         parent::__construct();
@@ -40,7 +40,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Grid
      * prepare collection
      * @access protected
      * @return Unideal_Topads_Block_Adminhtml_Banner_Grid
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _prepareCollection(){
         $collection = Mage::getModel('unideal_topads/banner')->getCollection();
@@ -51,7 +51,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Grid
      * prepare grid collection
      * @access protected
      * @return Unideal_Topads_Block_Adminhtml_Banner_Grid
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _prepareColumns(){
         $this->addColumn('entity_id', array(
@@ -73,18 +73,18 @@ class Unideal_Topads_Block_Adminhtml_Banner_Grid
                 '0' => Mage::helper('unideal_topads')->__('Disabled'),
             )
         ));
-        $this->addColumn('alt', array(
-            'header'=> Mage::helper('unideal_topads')->__('Alt text'),
-            'index' => 'alt',
-            'type'=> 'text',
-
-        ));
         $this->addColumn('link', array(
             'header'=> Mage::helper('unideal_topads')->__('Link'),
             'index' => 'link',
             'type'=> 'text',
 
         ));
+        $this->addColumn('alt', array(
+            'header'=> Mage::helper('unideal_topads')->__('Alt text'),
+            'index' => 'alt',
+            'type'=> 'text',
+
+        ));        
         if (!Mage::app()->isSingleStoreMode() && !$this->_isExport) {
             $this->addColumn('store_id', array(
                 'header'=> Mage::helper('unideal_topads')->__('Store Views'),
@@ -134,7 +134,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Grid
      * prepare mass action
      * @access protected
      * @return Unideal_Topads_Block_Adminhtml_Banner_Grid
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _prepareMassaction(){
         $this->setMassactionIdField('entity_id');
@@ -167,7 +167,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Grid
      * @access public
      * @param Unideal_Topads_Model_Banner
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getRowUrl($row){
         return $this->getUrl('*/*/edit', array('id' => $row->getId()));
@@ -176,7 +176,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Grid
      * get the grid url
      * @access public
      * @return string
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function getGridUrl(){
         return $this->getUrl('*/*/grid', array('_current'=>true));
@@ -185,7 +185,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Grid
      * after collection load
      * @access protected
      * @return Unideal_Topads_Block_Adminhtml_Banner_Grid
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _afterLoadCollection(){
         $this->getCollection()->walk('afterLoad');
@@ -197,7 +197,7 @@ class Unideal_Topads_Block_Adminhtml_Banner_Grid
      * @param Unideal_Topads_Model_Resource_Banner_Collection $collection
      * @param Mage_Adminhtml_Block_Widget_Grid_Column $column
      * @return Unideal_Topads_Block_Adminhtml_Banner_Grid
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _filterStoreCondition($collection, $column){
         if (!$value = $column->getFilter()->getValue()) {

@@ -19,7 +19,7 @@
  *
  * @category    Unideal
  * @package     Unideal_Topads
- * @author      Ultimate Module Creator
+ * @author      Fabrice Fetsch
  */
 class Unideal_Topads_Adminhtml_Topads_BannerController
     extends Unideal_Topads_Controller_Adminhtml_Topads {
@@ -41,7 +41,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * default action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function indexAction() {
         $this->loadLayout();
@@ -53,7 +53,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * grid action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function gridAction() {
         $this->loadLayout()->renderLayout();
@@ -62,7 +62,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * edit banner - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function editAction() {
         $bannerId    = $this->getRequest()->getParam('id');
@@ -95,7 +95,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * new banner action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function newAction() {
         $this->_forward('edit');
@@ -104,7 +104,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * save banner - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function saveAction() {
         if ($data = $this->getRequest()->getPost('banner')) {
@@ -150,7 +150,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * delete banner - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function deleteAction() {
         if( $this->getRequest()->getParam('id') > 0) {
@@ -179,7 +179,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * mass delete banner - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function massDeleteAction() {
         $bannerIds = $this->getRequest()->getParam('banner');
@@ -208,7 +208,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * mass status change - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function massStatusAction(){
         $bannerIds = $this->getRequest()->getParam('banner');
@@ -239,7 +239,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * export as csv - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function exportCsvAction(){
         $fileName   = 'banner.csv';
@@ -250,7 +250,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * export as MsExcel - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function exportExcelAction(){
         $fileName   = 'banner.xls';
@@ -261,7 +261,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * export as xml - action
      * @access public
      * @return void
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     public function exportXmlAction(){
         $fileName   = 'banner.xml';
@@ -272,7 +272,7 @@ class Unideal_Topads_Adminhtml_Topads_BannerController
      * Check if admin has permissions to visit related pages
      * @access protected
      * @return boolean
-     * @author Ultimate Module Creator
+     * @author Fabrice Fetsch
      */
     protected function _isAllowed() {
         return Mage::getSingleton('admin/session')->isAllowed('cms/unideal_topads/banner');
