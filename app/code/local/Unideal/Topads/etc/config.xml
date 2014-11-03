@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Unideal_Topads extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Unideal
+ * @package        Unideal_Topads
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Unideal_Topads>
+            <version>1.0.0</version>
+        </Unideal_Topads>
+    </modules>
+    <global>
+        <resources>
+            <unideal_topads_setup>
+                <setup>
+                    <module>Unideal_Topads</module>
+                    <class>Unideal_Topads_Model_Resource_Setup</class>
+                </setup>
+            </unideal_topads_setup>
+        </resources>
+        <blocks>
+            <unideal_topads>
+                <class>Unideal_Topads_Block</class>
+            </unideal_topads>
+        </blocks>
+        <helpers>
+            <unideal_topads>
+                <class>Unideal_Topads_Helper</class>
+            </unideal_topads>
+        </helpers>
+        <models>
+            <unideal_topads>
+                <class>Unideal_Topads_Model</class>
+                <resourceModel>unideal_topads_resource</resourceModel>
+            </unideal_topads>
+            <unideal_topads_resource>
+                <class>Unideal_Topads_Model_Resource</class>
+                <entities>
+                    <banner>
+                        <table>unideal_topads_banner</table>
+                    </banner>
+                    <banner_store>
+                        <table>unideal_topads_banner_store</table>
+                    </banner_store>
+                    <banner_product>
+                        <table>unideal_topads_banner_product</table>
+                    </banner_product>
+                </entities>
+            </unideal_topads_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <unideal_topads>
+                    <file>unideal_topads.xml</file>
+                </unideal_topads>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Unideal_Topads>
+                    <files>
+                        <default>Unideal_Topads.csv</default>
+                    </files>
+                </Unideal_Topads>
+            </modules>
+        </translate>
+        <events>
+            <core_block_abstract_prepare_layout_after>
+                <observers>
+                    <unideal_topads_banner_product>
+                        <type>singleton</type>
+                        <class>unideal_topads/adminhtml_observer</class>
+                        <method>addProductBannerBlock</method>
+                    </unideal_topads_banner_product>
+                </observers>
+            </core_block_abstract_prepare_layout_after>
+            <catalog_product_save_after>
+                <observers>
+                    <unideal_topads_banner_product>
+                        <type>singleton</type>
+                        <class>unideal_topads/adminhtml_observer</class>
+                        <method>saveProductBannerData</method>
+                    </unideal_topads_banner_product>
+                </observers>
+            </catalog_product_save_after>
+        </events>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Unideal_Topads before="Mage_Adminhtml">Unideal_Topads_Adminhtml</Unideal_Topads>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <routers>
+            <unideal_topads>
+                <use>standard</use>
+                <args>
+                    <module>Unideal_Topads</module>
+                    <frontName>unideal_topads</frontName>
+                </args>
+            </unideal_topads>
+        </routers>
+        <layout>
+            <updates>
+                <unideal_topads>
+                    <file>unideal_topads.xml</file>
+                </unideal_topads>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Unideal_Topads>
+                    <files>
+                        <default>Unideal_Topads.csv</default>
+                    </files>
+                </Unideal_Topads>
+            </modules>
+        </translate>
+    </frontend>
+    <default>
+        <unideal_topads>
+            <banner>
+                <breadcrumbs>1</breadcrumbs>
+            </banner>
+        </unideal_topads>
+    </default>
+</config>

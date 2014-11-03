@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Unideal_Topads extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Unideal
+ * @package        Unideal_Topads
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <unideal_topads translate="title" module="unideal_topads">
+                                        <title>Topads</title>
+                                    </unideal_topads>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <cms>
+                        <children>
+                            <unideal_topads translate="title" module="unideal_topads">
+                                <title>Top Ads</title>
+                                <children>
+                                    <banner translate="title" module="unideal_topads">
+                                        <title>Banner</title>
+                                        <sort_order>0</sort_order>
+                                    </banner>
+                                </children>
+                            </unideal_topads>                        </children>
+                    </cms>
+
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <cms>
+            <children>
+                <unideal_topads translate="title" module="unideal_topads">
+                    <title>Top Ads</title>
+                    <sort_order>0</sort_order>
+                    <children>
+                        <banner translate="title" module="unideal_topads">
+                            <title>Banner</title>
+                            <action>adminhtml/topads_banner</action>
+                            <sort_order>0</sort_order>
+                        </banner>
+                    </children>
+                </unideal_topads>            </children>
+        </cms>
+
+    </menu>
+</config>
