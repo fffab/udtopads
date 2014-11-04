@@ -39,6 +39,7 @@ class Unideal_Topads_Controller_Adminhtml_Topads
             }
             else{
                 $uploader = new Varien_File_Uploader($input);
+                $uploader->setAllowedExtensions(array('jpg', 'jpeg', 'gif', 'png'));                
                 $uploader->setAllowRenameFiles(true);
                 $uploader->setFilesDispersion(true);
                 $uploader->setAllowCreateFolders(true);

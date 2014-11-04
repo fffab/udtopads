@@ -15,7 +15,7 @@ class Unideal_Topads_Block_Magazine
         foreach($collection as $data)
         {     
             $banner[$i]['name']     = $data->getData('name');
-            $banner[$i]['image']    = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'banner/image'.$data->getData('image');
+            $banner[$i]['image']    = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'magazine/image'.$data->getData('image');
             $banner[$i]['alt']      = $data->getData('alt');
             $banner[$i]['link']     = $data->getData('link');
             $i++;
