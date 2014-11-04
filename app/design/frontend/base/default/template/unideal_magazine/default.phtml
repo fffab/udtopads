@@ -3,8 +3,9 @@
     
     if (count($magazine) > 0) {
     ?>
-    <div class="for-not-tablet enkiosque1"><a href="<?php echo $magazine['link']; ?>" title="<?php echo $magazine['name']; ?>"><img src="<?php echo $magazine['image']; ?>" alt="<?php echo $magazine['alt']; ?>" /></a></div> 
-    <div class="for-tablet enkiosque1"><a href="<?php echo $magazine['link']; ?>" title="<?php echo $magazine['name']; ?>"><img src="<?php echo $magazine['image']; ?>" alt="<?php echo $magazine['alt']; ?>" /></a></div>
+    <!--en kiosque 1=magazine incliné, géré en css selon le device, enkiosque 2 est fixe et n'apparaît que sur desktop -->
+    <div class="enkiosque1"><a href="<?php echo $magazine['link']; ?>" title="<?php echo $magazine['name']; ?>"><img src="<?php echo $magazine['image']; ?>" alt="<?php echo $magazine['alt']; ?>" /></a></div> 
+    <!--<div class="for-tablet enkiosque1"><a href="<?php echo $magazine['link']; ?>" title="<?php echo $magazine['name']; ?>"><img src="<?php echo $magazine['image']; ?>" alt="<?php echo $magazine['alt']; ?>" /></a></div>-->
     <div class="for-desktop enkiosque2"><a href="<?php echo $magazine['link']; ?>"><img src="<?php echo $this->getSkinUrl('images/enkiosque2.png'); ?>" alt="<?php echo $magazine['name']; ?>" /></a></div>
     
     <?php } ?>
