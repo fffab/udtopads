@@ -31,6 +31,8 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tab_Form
      */
     protected function _prepareForm(){
         $form = new Varien_Data_Form();
+        
+        $afterElementHtml = '<p class="nm"><small>' . Mage::helper('unideal_topads')->__('Magazine image size must be 140x99 in .png with transparency') . '</small></p>';        
         $form->setHtmlIdPrefix('magazine_');
         $form->setFieldNameSuffix('magazine');
         $this->setForm($form);
@@ -48,6 +50,7 @@ class Unideal_Topads_Block_Adminhtml_Magazine_Edit_Tab_Form
         $fieldset->addField('image', 'image', array(
             'label' => Mage::helper('unideal_topads')->__('Image Magazine'),
             'name'  => 'image',
+            'after_element_html' => $afterElementHtml,            
 
         ));
         

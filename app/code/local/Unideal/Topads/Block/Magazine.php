@@ -9,20 +9,20 @@ class Unideal_Topads_Block_Magazine
                                 ->getCollection()
                                 ->addFilter('status', '1');
         
-        $banner = array();
+        $magazine = array();
         $i = 0;
         
         foreach($collection as $data)
         {     
-            $banner[$i]['name']     = $data->getData('name');
-            $banner[$i]['image']    = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'magazine/image'.$data->getData('image');
-            $banner[$i]['alt']      = $data->getData('alt');
-            $banner[$i]['link']     = $data->getData('link');
+            $magazine[$i]['name']     = $data->getData('name');
+            $magazine[$i]['image']    = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'magazine/image'.$data->getData('image');
+            $magazine[$i]['alt']      = $data->getData('alt');
+            $magazine[$i]['link']     = $data->getData('link');
             $i++;
         }
         
-        $random = rand (0,(count($banner)-1));
+        $random = rand (0,(count($magazine)-1));
                
-        return $banner[$random];
+        return $magazine[$random];
      }    
 }

@@ -30,9 +30,4 @@ class Unideal_Topads_MagazineController
           $this->renderLayout();
     }
     
-    public function mamethodeAction()
-    {
-          echo 'test';
-    }
-    
 }
