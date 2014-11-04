@@ -1,16 +1,9 @@
 <?php
-    $banner = $this->displayMagazine();
-    // array(4) { 
-    //  ["name"]=> string(14) "Nom de l'image" 
-    //  ["image"]=> string(62) "http://burda.udhost.ovh/media/banner/image/t/e/test-600-200jpg" 
-    //  ["alt"]=> string(14) "Alt de l'image" 
-    //  ["link"]=> string(8) "mon lien" 
-    //  } 
-    if (count($banner) > 0) {
+    $magazine = $this->displayMagazine();
+    if (count($magazine) > 0) {
     ?>
-    <div>
-        <a href="<?php echo $banner['link']; ?>" alt="<?php echo $banner['alt']; ?>">
-            <img src="<?php echo $banner['image']; ?>" name="<?php echo $banner['name']; ?>">
-        </a>
-    </div>
+    <div class="for-not-tablet enkiosque1"><img src="<?php echo $magazine['image']; ?>" alt="<?php echo $magazine['name']; ?>" /></div> 
+    <div class="for-tablet enkiosque1"><img src="<?php echo $magazine['image']; ?>" alt="<?php echo $magazine['name']; ?>" /></div>
+    <div class="for-desktop enkiosque2"><img src="<?php echo $this->getSkinUrl('images/enkiosque2.png'); ?>" alt="<?php echo $magazine['name']; ?>" /></div>
+    
     <?php } ?>

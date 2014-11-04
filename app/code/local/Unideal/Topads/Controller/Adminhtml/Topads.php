@@ -44,7 +44,10 @@ class Unideal_Topads_Controller_Adminhtml_Topads
                 $uploader->setFilesDispersion(true);
                 $uploader->setAllowCreateFolders(true);
                 $result = $uploader->save($destinationFolder);
+                
                 return $result['file'];
+                              
+                
             }
         }
         catch (Exception $e) {
@@ -59,4 +62,5 @@ class Unideal_Topads_Controller_Adminhtml_Topads
         }
         return '';
     }
+       
 }

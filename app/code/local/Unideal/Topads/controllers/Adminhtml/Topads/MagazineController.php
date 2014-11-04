@@ -112,6 +112,11 @@ class Unideal_Topads_Adminhtml_Topads_MagazineController
                 $magazine = $this->_initMagazine();
                 $magazine->addData($data);
                 $imageName = $this->_uploadAndGetName('image', Mage::helper('unideal_topads/magazine_image')->getImageBaseDir(), $data);
+                // $imageName 
+                // string(20) "/e/n/enkiosque_3.png" 
+                // 
+                // Mage::helper('unideal_topads/magazine_image')->getImageBaseDir()
+                // /var/www/html/m/mageburda/web/magento/media/magazine/image
                 $magazine->setData('image', $imageName);
                 $magazine->save();
                 Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('unideal_topads')->__('Magazine was successfully saved'));
